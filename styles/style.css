@@ -29,6 +29,7 @@
   nav {
     display: flex;
     align-items: center;
+    justify-content: space-evenly;
   }
   nav a {
     width: 50%;
@@ -40,8 +41,28 @@
   }
   ul.nav {
     display: flex;
-    width: 100%;
-    justify-content: space-evenly;
+    flex-direction: column;
+    background: #fff;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 80px;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+    transform: translateX(120%);
+    transition: transform 0.4s ease;
+  }
+
+  ul.nav li {
+    margin: 10%;
+  }
+
+  ul.show {
+    transform: translateX(0%);
+  }
+
+  .burger {
+    display: block;
   }
 
   section.hero {
@@ -66,7 +87,7 @@
     font-size: 1.5rem;
     color: #678e3e;
   }
-  button {
+  button.btn {
     background-color: #678e3e;
     border-radius: 28px;
     border: 1px solid #18ab29;
@@ -228,19 +249,48 @@
     font-size: calc(var(--base-font-size) * 1.2);
     line-height: calc(var(--base-line-height) * 1.2);
   }
+
+  nav {
+    justify-content: flex-start;
+  }
   nav img,
   footer img {
     width: 30%;
   }
-  button:hover,
+
+  .burger {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 20px;
+    color: #0594ec;
+    cursor: pointer;
+  }
+  button.burger:focus {
+    outline: none;
+  }
+
+  button.btn:hover,
   .service-info a:hover {
     background-color: #5cbf2a;
   }
-  button:active,
+  button.btn:active,
   .service-info a:active {
     position: relative;
     top: 1px;
   }
+
+  ul.nav {
+    flex-direction: row;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+    top: 30px;
+  }
+  ul.nav li {
+    margin: 0;
+  }
+
   div.hero-content,
   section.contact {
     flex-direction: row;
