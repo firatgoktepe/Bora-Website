@@ -44,7 +44,7 @@
     flex-direction: column;
     background: #fff;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    position: fixed;
+    position: absolute;
     top: 80px;
     left: 10%;
     width: 80%;
@@ -101,7 +101,18 @@
     text-shadow: 0px 1px 0px #2f6627;
     margin: 5%;
   }
+  button.toggleX{
+    display: none;
+  }
 
+  button.open{
+    display: block;
+  }
+
+  .burger.openclose {
+    display: none;
+  }
+ 
   .hero-image {
     filter: drop-shadow(0 0.3rem 0.1rem rgba(0, 0, 0, 0.4));
     border-radius: 0.5rem;
