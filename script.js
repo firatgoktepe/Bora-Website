@@ -3,7 +3,7 @@ const ul = document.querySelector('ul.nav');
 
 const x = document.querySelector('button.toggleX');
 
-const li = document.querySelector('ul.nav li:nth-child(1)');
+const li = document.querySelector('ul.nav li');
 
 burger.addEventListener('click', () => {
   ul.classList.toggle('show');
@@ -20,9 +20,9 @@ x.addEventListener('click', () => {
 })
 
 li.addEventListener('click', () => {
-  if (window.innerWidth < 768){
+  if (window.innerWidth < 768) {
     burger.classList.toggle('openclose')
     x.classList.toggle('open');
     ul.classList.toggle('show')
-  }  
+  }
 })
