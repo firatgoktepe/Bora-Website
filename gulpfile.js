@@ -13,6 +13,9 @@ const htmlmin = require('gulp-htmlmin');
 // For minifying js files
 const terser = require('gulp-terser'); 
 
+// image minimization
+const image = require('gulp-image');
+
 
 
 
@@ -20,7 +23,8 @@ const terser = require('gulp-terser');
 const files = {
     cssPath: 'src/css/**/*.css',
     jsPath: 'src/js/**/*.js',
-    htmlPath: '*.html' 
+    htmlPath: '*.html',
+    imagePath: 'img/*'  
 }
 
 // Sass task: compiles the style.scss file into style.css
@@ -53,6 +57,17 @@ function htmlTask(){
     .pipe(dest('dist'));
 }
 
+// Image Min
+
+function imageTask(){
+    return src([
+        files.imagePath
+        
+        ])
+       .pipe(image())
+       .pipe(dest('dist/img'))
+}
+
 // Watch task: watch SCSS and JS files for changes
 // If any change, run scss and js tasks simultaneously
 function watchTask(){
@@ -60,7 +75,8 @@ function watchTask(){
         {interval: 1000, usePolling: true}, //Makes docker work
         series(
             parallel(cssTask, jsTask),
-            htmlTask
+            htmlTask,
+            imageTask
 
         )
     );
@@ -72,6 +88,7 @@ function watchTask(){
 exports.default = series(
     parallel(cssTask, jsTask),
     htmlTask,
+    imageTask,
     watchTask
 );
 
