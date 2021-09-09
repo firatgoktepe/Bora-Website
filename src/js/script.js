@@ -20,7 +20,7 @@ x.addEventListener('click', () => {
 })
 
 li.addEventListener('click', () => {
-  if (window.innerWidth < 768) {
+  if (window.innerWidth < 1024) {
     burger.classList.toggle('openclose')
     x.classList.toggle('open');
     ul.classList.toggle('show')
