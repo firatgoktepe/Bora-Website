@@ -64,7 +64,15 @@ function imageTask(){
         files.imagePath
         
         ])
-       .pipe(image())
+        .pipe(image({
+            optipng: ['-i 1', '-strip all', '-fix', '-o7', '-force'],
+            pngquant: ['--speed=1', '--force', 256],
+            zopflipng: ['-y', '--lossy_8bit', '--lossy_transparent'],
+            jpegRecompress: ['--strip', '--quality', 'medium', '--min', 40, '--max', 80],
+            mozjpeg: ['-optimize', '-progressive'],
+            gifsicle: ['--optimize'],
+            svgo: ['--enable', 'cleanupIDs', '--disable', 'convertColors']
+          }))
        .pipe(dest('dist/img'))
 }
 
