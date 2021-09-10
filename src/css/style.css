@@ -13,7 +13,7 @@
   /* 160em: 2560px */
 
   /* Font-Size */
-  --base-font-size: 1em;
+  --base-font-size: font-size: 0.875rem;;
 
   /* Line-Height */
   --base-line-height: 1.5;
@@ -24,7 +24,7 @@
 
   /* Button font size */
 
-  --button-btn-font-size: 15px;
+  --button-btn-font-size: .7rem;
 
   /* card image height */
   --card-img-height: 17rem;
@@ -35,6 +35,7 @@
 @media only screen and (min-width: 20em) {
   body {
     font-size: calc(var(--base-font-size));
+    font-family: "Catamaran", sans-serif;
   }
   nav {
     display: flex;
@@ -91,6 +92,20 @@
     display: flex;
     background: #f1f1f1;
     padding: 5%;
+  }
+
+  .services h1,
+  h2 {
+    font-family: "Xanh Mono", monospace;
+    font-weight: normal;
+  }
+  .services h1 {
+    color: #678e3e;
+    padding-bottom: 0.67em;
+  }
+
+  .service-info p {
+    color: #617d98;
   }
 
   header ul.icons,
@@ -203,13 +218,12 @@
   .service-info a {
     background-color: #678e3e;
     border-radius: 28px;
-    border: 1px solid #18ab29;
     display: inline-block;
     cursor: pointer;
     color: #ffffff;
     font-family: Arial;
     font-size: var(--button-btn-font-size);
-    padding: 15px 20px;
+    padding: 10px 20px;
     text-decoration: none;
     text-shadow: 0px 1px 0px #2f6627;
     margin: 5%;
@@ -226,6 +240,15 @@
     margin: 0 auto;
   }
 
+  .contact-info {
+    padding: 2em;
+  }
+
+  .contact-title {
+    color: #678e3e;
+    font-family: Xanh Mono, monospace;
+  }
+
   .contact-form {
     background: #fff;
     border-radius: 0.5rem;
@@ -234,6 +257,10 @@
     transition: all 0.3s linear;
   }
   .contact-form h2 {
+    color: #617d98;
+  }
+
+  .contact-form h1 {
     color: #617d98;
   }
 
@@ -269,10 +296,6 @@
   }
   footer ul li {
     padding-right: 1rem;
-  }
-
-  .contact-text {
-    font-size: 1.5em;
   }
 }
 
