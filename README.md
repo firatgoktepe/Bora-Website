@@ -10,7 +10,7 @@
 
 <img width="968" alt="Screenshot 2021-10-02 at 12 32 08" src="https://user-images.githubusercontent.com/47864126/135710946-6cf42b5b-6eba-45aa-9f59-fa704f56d140.png">
 
-https://user-images.githubusercontent.com/47864126/136689875-ed40d632-c9ff-478e-841c-935f43d60d29.mp4
+https://user-images.githubusercontent.com/47864126/136689875-ed40d632-c9ff-478e-841c-935f43d60d29.mp4?autoplay=1
 
 <h2>🛠️ Installation Steps:</h2>
 
